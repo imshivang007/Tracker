@@ -51,8 +51,8 @@ You can extend this project to track actual vehicle data by connecting to a real
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/vehicle-tracker.git
-   cd vehicle-tracker
+   git clone https://github.com/imshivang007/Tracker.git
+   cd Tracker
    ```
 
 2. **Install dependencies**:
@@ -76,17 +76,6 @@ You can extend this project to track actual vehicle data by connecting to a real
 - The app simulates real-time vehicle movement by randomly adjusting the vehicle’s latitude and longitude.
 - The frontend listens to WebSocket messages from the server to update the vehicle’s position on the map every 2 seconds.
 
-### File Structure
-
-```
-/project-root
-   ├── /public              # Contains index.html (Leaflet.js frontend)
-   │   └── index.html
-   ├── server.js            # Node.js server with WebSocket
-   ├── package.json         # Dependencies
-   ├── package-lock.json
-   └── .gitignore
-```
 
 ## Deployment on Render
 
@@ -103,17 +92,10 @@ You can easily deploy this app on Render using the following steps:
 ### Important: WebSocket URL
 If Render provides a unique domain, make sure to update the WebSocket client URL in your `public/index.html` file:
 ```javascript
-const socket = new WebSocket('wss://your-app-name.onrender.com');
+const socket = new WebSocket('wss://tracker-j9nf.onrender.com');
 ```
 
 ## Contributing
 
 If you would like to contribute to this project, feel free to fork the repository and submit a pull request. Contributions are welcome!
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-This `README.md` provides an overview of the project, setup instructions, deployment guide, and usage details. You can modify the deployment instructions based on your hosting platform, and feel free to add more sections as needed!
