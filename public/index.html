@@ -117,7 +117,7 @@
             .bindPopup('Vehicle location').openPopup();
 
         // Connect to WebSocket for real-time location updates
-        const socket = new WebSocket('ws://localhost:3000');
+        const socket = new WebSocket('wss://tracker-j9nf.onrender.com');
 
         // Update vehicle marker when receiving new data
         socket.onmessage = (event) => {

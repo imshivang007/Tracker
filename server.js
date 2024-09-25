@@ -7,6 +7,8 @@ const app = express();
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
+const PORT = process.env.PORT || 3000; // Use Render's provided port or default to 3000
+
 app.use(express.static('public'));
 
 // WebSocket to send vehicle location updates to the client
@@ -31,6 +33,6 @@ wss.on('connection', (ws) => {
 });
 
 // Start server
-server.listen(3000, () => {
-    console.log('Server is running on port 3000');
+server.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
